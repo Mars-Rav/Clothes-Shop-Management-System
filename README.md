@@ -54,3 +54,8 @@
                6.2. So the admin can search for a certain staff member.
 
      7. The user should be able to exit the program at any time, and when they do, the program should automatically log them out.
+     
+     
+    3     Diagrammatic Representation
+    
+    
