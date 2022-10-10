@@ -75,14 +75,16 @@ They must have sufficient access to the system by allowing them to:
 
 ### The system must provide information .
      
-    3     Diagrammatic Representation
-    ![usecase drawio](https://user-images.githubusercontent.com/88538757/194938180-7ade41c0-abd6-4870-80b6-b1a1eae7f48d.png)
-    The Diagram Has Been Designed By:
-    - Srusht Sleman
-    - Mabast Abdulqadir
-    - Raman Mhedin
-    - Hassan Sabah
-    Under The Supervision Of:
-    - Mina Bassam
+## Diagrammatic Representation
+### [usecase](https://user-images.githubusercontent.com/88538757/194938180-7ade41c0-abd6-4870-80b6-b1a1eae7f48d.png)
+
+
+## The Diagram Has Been Designed By:
+- Srusht Sleman
+- Mabast Abdulqadir
+- Raman Mhedin
+- Hassan Sabah
+### Under The Supervision Of:
+- Mina Bassam
 
     
