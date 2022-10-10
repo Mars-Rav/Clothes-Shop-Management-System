@@ -1,6 +1,17 @@
 # Clothes-Shop-Management-System
 
      1     Analysis
+      1.1. Product Scope 
+          1. Higher Efficiency: Better item tracking and staff management.
+          2. Better Control Over Business Processes and Needs.
+          3. Customer Satisfaction: With the quick and consistent service.
+          4. Highly accurate data: Does not wear out or get lost.
+          5. Facilitates Data Manipulation: Like removing or adding new records.
+          6. Improved Communication: Between staff and customers, and staff and administration.
+          7. Facilitates Transactions With The Customers.
+          8. Facilitates Tracking Stocks And Payments.
+          9. Higher Efficiency in Managing Payments.
+          10. Easier To Apply And Manage Discounts.
      
       1.2. Product Value
           Customers of the shop will always stay satisfied since articles will always be available.
