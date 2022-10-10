@@ -27,3 +27,21 @@
           be removed, new ones can be added to any garment. All transactions will be
           recorded as well for later use, like if the customer wanted to return a garment.
 
+
+     2     Functional Requirements
+     
+     1. The program must ask the user to log in.
+          1.1. The user must enter the username and the password.
+          1.2. If the username or the password was incorrect, the user must be informed and taken back to the login screen.
+     2. The program must determine whether the user was an admin or a cashier.
+     3. If the user was an admin:
+          3.1. They must have sufficient access to the system by allowing them to:
+               3.1.1. Have the ability to know the garments available, their ID, their name, price, quantity, category, available discounts, and description. 
+               3.1.2. Manage the data like adding new garments, removing, and modifying existing garments(Like changing their name, price, description, stock, adding                         discounts …etc.).
+               3.1.3. Add, remove, and modify staff members. The modification includes changing their salary by giving them a raise or lowering their salary.
+               3.1.4. View staff members and see their personal info that includes ID, name, DOB, address, phone number, email, salary, position, gender, password …                          etc.
+               3.1.5. Search staff by ID, or name.
+               3.1.6. View the history, meaning all the orders that have been made by customers.
+               3.1.7. View the items according to their category, name, or ID.
+               3.1.8. See total earnings per day.
+               3.1.9. Search bills by ID, and date.
