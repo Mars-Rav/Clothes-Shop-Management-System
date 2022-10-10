@@ -45,3 +45,12 @@
                3.1.7. View the items according to their category, name, or ID.
                3.1.8. See total earnings per day.
                3.1.9. Search bills by ID, and date.
+     5. The system must provide information .
+               5.1. The added product must have(name, size, color, brand, model, date it was added, quantity etc…).
+               5.2. It must provide an exact number of how many pieces have been sold and how many are left.
+
+     6. The program has to provide a search facility.
+               6.1. So the user can search for a certain piece of clothes.
+               6.2. So the admin can search for a certain staff member.
+
+     7. The user should be able to exit the program at any time, and when they do, the program should automatically log them out.
