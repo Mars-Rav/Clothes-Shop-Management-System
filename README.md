@@ -50,10 +50,22 @@
                3.1.7. View the items according to their category, name, or ID.
                3.1.8. See total earnings per day.
                3.1.9. Search bills by ID, and date.
+     4. If the user was a cashier:
+          4.1. They should be able to place an order or return a garment, depending on the customer.
+          4.2. When placing an order:
+               4.2.1. They should enter the name of the garment/s the customer is buying and the quantity. 
+               4.2.2. The cashier should be provided with a list of all the garments ordered by the customer, their price, quantity, date, a total price for each                             garment type based on its quantity, and a total price for all the garments together. If discounts were offered, they should be indicated.
+               4.2.3. The cashier should have the ability to remove any unwanted item or clear the whole cart.
+               4.2.4. After placing the order, these garments’ quantity should be decreased in the database. And the cashier should be provided with an electronic bill                       (displayed on the screen) that includes all the information that was displayed before placing the order, and the bill ID.
+               4.2.5. Then the cashier can start another order.
+
+         4.3. When returning an garment:
+              4.3.1. To return an garment the user must provide the name of the garment, and the date the garment was bought.
+              4.3.2. The customer cannot return a garment after two weeks.
+              4.3.3. If the date was valid, the garment should go back to the database and its quantity there must increase.
      5. The system must provide information .
                5.1. The added product must have(name, size, color, brand, model, date it was added, quantity etc…).
                5.2. It must provide an exact number of how many pieces have been sold and how many are left.
-
      6. The program has to provide a search facility.
                6.1. So the user can search for a certain piece of clothes.
                6.2. So the admin can search for a certain staff member.
