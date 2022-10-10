@@ -26,6 +26,11 @@
           staff working and all the garments available. Garments and staff members can 
           be removed, new ones can be added to any garment. All transactions will be
           recorded as well for later use, like if the customer wanted to return a garment.
+     1.5. General Description 
+         This shop management system is a system that manages garment stores. There are two points of view:
+         the admin’s and the cashier’s. The admin will manage verything about the store, from adding and removing garments,
+         to increasing and decreasing prices, to adding a new staff member, and changing their salary.    
+         The cashier, on the other hand, can place orders and return garments.
 
 
      2     Functional Requirements
