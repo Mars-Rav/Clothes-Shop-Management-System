@@ -128,5 +128,13 @@ public class Staff {
         }
         return date1;
     }
+    private String convertDateToString(Date dob) {
+
+        String stringofdate;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        stringofdate = simpleDateFormat.format(dob);
+        return stringofdate;
+
+    }
     
 }
