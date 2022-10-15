@@ -110,4 +110,23 @@ public class Staff {
         this.password = password;
     }
     
+    public Date convertStringToDate(String dob) {
+        Date date1 = null;
+
+        while (true) {
+
+            try {
+                date1 = new SimpleDateFormat("dd/MM/yyyy").parse(dob);
+
+                break;
+            } catch (ParseException e) {
+                System.out.println("the date must be like (day/month/year)");
+                String rightdate = input.next();
+                dob = rightdate;
+
+            }
+        }
+        return date1;
+    }
+    
 }
