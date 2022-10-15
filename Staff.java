@@ -128,12 +128,26 @@ public class Staff {
         }
         return date1;
     }
+    
     private String convertDateToString(Date dob) {
 
         String stringofdate;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
         stringofdate = simpleDateFormat.format(dob);
         return stringofdate;
+
+    }
+    
+    @Override
+    public String toString() {
+        return ("id: " + id + "\n" +
+                "name: " + name + "\n" +
+                "gender: " + gender + "\n" +
+                "Date Of Birth: " + convertDateToString(dob) + "\n" +
+                "phone number: " + phonenumber + "\n" +
+                "email: " + email + "\n" +
+                "address: " + address + "\n" +
+                "password: " + password + "\n");
 
     }
     
