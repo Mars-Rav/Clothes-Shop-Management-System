@@ -3,6 +3,7 @@ package minaACP;
 import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Objects;
 
 public class Garment {
 	
@@ -94,10 +95,6 @@ public class Garment {
 		this.description = description;
 	}
 	
-	public String toString() {
-		return "Garment: [" + id + " - " + name + " - " + price + " - " + quantity + " - " + category + " - " + discount + " - " + description + "]";
-	}
-
 	public String getBrand() {
 		return brand;
 	}
@@ -142,6 +139,14 @@ public class Garment {
 
 	public void setModel(String model) {
 		this.model = model;
+	}
+	
+	public int hashCode() {
+		return Objects.hashCode(id);
+	}
+	
+	public String toString() {
+		return "Garment: [" + id + " - " + name + " - " + price + " - " + quantity + " - " + category + " - " + discount + " - " + description + "]";
 	}
 	
 }
