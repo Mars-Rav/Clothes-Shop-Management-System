@@ -1,14 +1,12 @@
-package minaACP;
-
 import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Objects;
 
 public class Garment {
 	
 	private int id;
 	private String name;
+	private String barcode;
 	private String brand;
 	private String size;
 	private String color;
@@ -20,13 +18,14 @@ public class Garment {
 	private double discount;
 	private String description;
 	
-	public Garment(int id, String name, String brand, String size, String color, String dateAdded, String model, double price, int quantity, String category, double discount, String description) {
-		setAll(id, name, brand, size, color, dateAdded, model, price, quantity, category, discount, description);
+	public Garment(int id, String name, String barcode, String brand, String size, String color, String dateAdded, String model, double price, int quantity, String category, double discount, String description) {
+		setAll(id, name, barcode, brand, size, color, dateAdded, model, price, quantity, category, discount, description);
 	}
 	
-	public void setAll(int id, String name, String brand, String size, String color, String dateAdded, String model, double price, int quantity, String category, double discount, String description){
+	public void setAll(int id, String name, String barcode, String brand, String size, String color, String dateAdded, String model, double price, int quantity, String category, double discount, String description){
 		setID(id);
 		setName(name);
+		setBarcode(barcode);
 		setBrand(brand);
 		setSize(size);
 		setColor(color);
@@ -53,6 +52,14 @@ public class Garment {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public void setBarcode(String barcode) {
+		this.barcode = barcode;
+	}
+	
+	public String getBarcode() {
+		return barcode;
 	}
 
 	public double getPrice() {
@@ -94,7 +101,7 @@ public class Garment {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
+
 	public String getBrand() {
 		return brand;
 	}
@@ -141,12 +148,8 @@ public class Garment {
 		this.model = model;
 	}
 	
-	public int hashCode() {
-		return Objects.hashCode(id);
-	}
-	
 	public String toString() {
-		return "Garment: [" + id + " - " + name + " - " + price + " - " + quantity + " - " + category + " - " + discount + " - " + description + "]";
+		return "Garment: [" + id + " - " + name + " - " + barcode + " - " + price + " - " + quantity + " - " + category + " - " + discount + " - " + description + "]";
 	}
 	
 }
