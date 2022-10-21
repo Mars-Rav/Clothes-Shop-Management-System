@@ -4,7 +4,6 @@ public class User {
 	private int id;
 	private String name;
 	private String gender;
-	private String position;
 	private String dob;
 	private String phoneNumber;
 	private String email;
