@@ -6,8 +6,6 @@ import Models.InvoiceModel;
 import java.util.ArrayList;
 import java.util.Date;
 
-// String cashierName, int cashierID, int invoiceID, Date date, ArrayList<GarmentModel> garmentsList, double totalPrice, double totalPricePerType
-
 public abstract class InvoiceController {
 
     private static ArrayList<InvoiceModel> invoiceBodyList = new ArrayList<InvoiceModel>();
