@@ -2,7 +2,7 @@ import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class Garment {
+public class GarmentModel {
 	
 	private int id;
 	private String name;
@@ -18,7 +18,7 @@ public class Garment {
 	private double discount;
 	private String description;
 	
-	public Garment(int id, String name, String barcode, String brand, String size, String color, String dateAdded, String model, double price, int quantity, String category, double discount, String description) {
+	public GarmentModel(int id, String name, String barcode, String brand, String size, String color, String dateAdded, String model, double price, int quantity, String category, double discount, String description) {
 		setAll(id, name, barcode, brand, size, color, dateAdded, model, price, quantity, category, discount, description);
 	}
 	
