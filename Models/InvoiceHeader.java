@@ -1,15 +1,20 @@
+package Models;
 import java.util.Date;
 
 public class InvoiceHeader {
 	
 	private int id;
 	private String empName;
+	private int invoiceID;
 	private Date date;
 	
 	private final String ShopName = "Boutique";
 	
 	InvoiceHeader(String cashierName, int cashierID, int invoiceID, Date date){
-		
+		setID(cashierID);
+		setCashierName(cashierName);
+		setInvoiceID(invoiceID);
+		setDate(date);
 	}
 	
 	public void setID(int id) {
@@ -19,11 +24,19 @@ public class InvoiceHeader {
 		return id;
 	}
 	
-	public void setEmpName(String empName) {
+	public void setCashierName(String empName) {
 		this.empName = empName;
 	}
-	public String getEmpName() {
+	public String getCashierName() {
 		return empName;
+	}
+	
+	public void setInvoiceID(int invoiceID){
+		this.invoiceID = invoiceID;
+	}
+	
+	public int getInvoiceID() {
+		return invoiceID;
 	}
 	
 	public void setDate(Date date) {
