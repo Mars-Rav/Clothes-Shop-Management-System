@@ -10,9 +10,7 @@ public abstract class InvoiceController {
 
     private static ArrayList<InvoiceModel> invoiceBodyList = new ArrayList<InvoiceModel>();
     
-    public InvoiceController(InvoiceModel invoice) {
-    	
-    }
+   
     
     public static void addNewInvoice(InvoiceModel Invoice){
         invoiceBodyList.add(Invoice);
