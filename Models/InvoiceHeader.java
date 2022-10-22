@@ -7,6 +7,7 @@ public class InvoiceHeader {
 	private String empName;
 	private int invoiceID;
 	private Date date;
+	private Double totalPrice;
 	
 	private final String ShopName = "Boutique";
 	
