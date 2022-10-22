@@ -1,9 +1,11 @@
+package Models;
 
 public class User {
 	
 	private int id;
 	private String name;
 	private String gender;
+	private String position;
 	private String dob;
 	private String phoneNumber;
 	private String email;
@@ -13,7 +15,7 @@ public class User {
 	private String role;
 	
 	public User(int id, String name, String gender, String position, String dob, String phoneNumber, String email, double salary, String address, String password, String role) {
-		setId(id);
+		setID(id);
 		setName(name);
 		setGender(gender);
 		setPosition(position);
@@ -26,11 +28,11 @@ public class User {
 		setRole(role);
 	}
 
-	public int getId() {
+	public int getID() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setID(int id) {
 		this.id = id;
 	}
 
