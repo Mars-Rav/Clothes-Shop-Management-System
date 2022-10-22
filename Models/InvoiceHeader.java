@@ -11,11 +11,12 @@ public class InvoiceHeader {
 	
 	private final String ShopName = "Boutique";
 	
-	InvoiceHeader(String cashierName, int cashierID, int invoiceID, Date date){
+	InvoiceHeader(String cashierName, int cashierID, int invoiceID, Date date,Double totalPrice){
 		setID(cashierID);
 		setCashierName(cashierName);
 		setInvoiceID(invoiceID);
 		setDate(date);
+		setTotalPrice(totalPrice);
 	}
 	
 	public void setID(int id) {
@@ -45,6 +46,14 @@ public class InvoiceHeader {
 	}
 	public Date getDate() {
 		return date;
+	}
+	
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+	
+	public Double getTotalPrice() {
+		return totalPrice;
 	}
 
 }
