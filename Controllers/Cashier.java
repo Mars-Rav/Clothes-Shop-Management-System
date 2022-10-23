@@ -35,10 +35,8 @@ public abstract  class CashierController {
 		}
     }
     
-    public static void createNewInvoice(String cashierName, int cashierID, int invoiceID, Date date, ArrayList<GarmentModel> garmentsList) {
-    	InvoiceController.addNewInvoice(new InvoiceModel(cashierName, cashierID, invoiceID, date, garmentsList));
+    public static void createNewInvoice(String cashierName, int cashierID, int invoiceID, Date date, double totalPrice, double totalPriceForType, ArrayList<GarmentModel> garmentsList) {
+    	InvoiceController.addNewInvoice(new InvoiceModel(cashierName, cashierID, invoiceID, date, totalPrice, totalPriceForType, garmentsList));
     }
     
 }
-
-
