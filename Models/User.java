@@ -107,7 +107,7 @@ public class User {
 	}
 	
 	public String toString() {
-		return "User: " + "[ " + id + " - " + name + " - " + gender + " - " + position + " - " + dob + " - " + phoneNumber + " - " + email + " - " + salary + " - " + address + " - " + password + " - " + role + " ]";
+		return "User: " + "[ " + id + " - " + name + " - " + gender + " - " + dob + " - " + phoneNumber + " - " + email + " - " + salary + " - " + address + " - " + password + " - " + role + " ]";
 	}
 
 }
