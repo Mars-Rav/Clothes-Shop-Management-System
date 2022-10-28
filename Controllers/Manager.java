@@ -17,7 +17,7 @@ public abstract class Manager{
 	}
 	
 	public void addNewCashier(int id, String name, String gender, String position, String dob, String phoneNumber, String email, double salary, String address, String password, String role) {
-		CashierController.addNewCashier(new User(id, name, gender, position, dob, phoneNumber, email, salary, address, password, role));
+		CashierController.addNewCashier(new User(id, name, gender, dob, phoneNumber, email, salary, address, password, role));
 	}
 	
 	public void removeCashier(String name) {
