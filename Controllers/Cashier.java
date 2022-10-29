@@ -13,10 +13,12 @@ import java.util.Date;
 public abstract  class CashierController {
 	  
     public static ArrayList<User> cashiers = new ArrayList<User>();
+	 public static File file = new File("sample.txt");
 
-    public static void addNewCashier(User cashier){
-	    
-    	cashiers.add(cashier);
+    public static void addNewCashier(User cashier) throws IOException {
+
+        cashiers.add(cashier);
+        writetofile(file);
     }
 	
     public static void removeCashier(String name){
@@ -38,8 +40,6 @@ public abstract  class CashierController {
 			
 		}
     }
-	
-    public static File file = new File("sample.txt");
 
     public static void writetofile(File file) throws IOException {
         if (!file.exists()) {
