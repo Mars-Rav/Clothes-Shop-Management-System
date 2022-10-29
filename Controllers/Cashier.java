@@ -1,18 +1,24 @@
-package Controller;
+package Controllers;
 
 import Models.GarmentModel;
 import Models.InvoiceModel;
 import Models.User;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
 public abstract  class CashierController {
 	  
-	public static ArrayList<User> cashiers = new ArrayList<User>();
+    public static ArrayList<User> cashiers = new ArrayList<User>();
+	 public static File file = new File("sample.txt");
 
-    public static void addNewCashier(User cashier){
-	    
-    	cashiers.add(cashier);
+    public static void addNewCashier(User cashier) throws IOException {
+
+        cashiers.add(cashier);
+        writetofile(file);
     }
 	
     public static void removeCashier(String name){
@@ -34,9 +40,31 @@ public abstract  class CashierController {
 			
 		}
     }
+
+    public static void writetofile(File file) throws IOException {
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+        FileOutputStream fos = new FileOutputStream(file);
+        String textToBewritten = cashiers.toString();
+        fos.write(textToBewritten.getBytes());
+        fos.flush();
+        fos.close();
+    }
+
+    public static void readtofile(File file) throws IOException {
+        FileInputStream fis = new FileInputStream(file);
+        int i = fis.read();
+        while (!(i == -1)) {
+            char c = (char) i;
+            System.out.print(c);
+            i = fis.read();
+        }
+        fis.close();
+    }
     
-    public static void createNewInvoice(String cashierName, int cashierID, int invoiceID, Date date, double totalPrice, double totalPriceForType, ArrayList<GarmentModel> garmentsList) {
-    	InvoiceController.addNewInvoice(new InvoiceModel(cashierName, cashierID, invoiceID, date, totalPrice, totalPriceForType, garmentsList));
+    public static void createNewInvoice(String cashierName, int cashierID, int invoiceID, Date date, double totalPrice, ArrayList<Double> totalPricePerType, ArrayList<GarmentModel> garmentsList) {
+    	InvoiceController.addNewInvoice(new InvoiceModel(cashierName, cashierID, invoiceID, date, totalPrice, totalPricePerType, garmentsList));
     }
     
 }

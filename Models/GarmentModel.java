@@ -1,28 +1,34 @@
+package Models;
+
 import java.util.Date;
+import java.io.*;
+import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class GarmentModel {
-	
+
 	private int id;
 	private String name;
 	private String barcode;
 	private String brand;
 	private String size;
 	private String color;
-	private Date dateAdded;
+	private String dateAdded;
 	private String model;
 	private double price;
 	private int quantity;
 	private String category;
 	private double discount;
 	private String description;
-	
-	public GarmentModel(int id, String name, String barcode, String brand, String size, String color, String dateAdded, String model, double price, int quantity, String category, double discount, String description) {
+
+	// throws IOException
+
+	public GarmentModel(int id, String name, String barcode, String brand, String size, String color, Date dateAdded, String model, double price, int quantity, String category, double discount, String description)throws IOException {
 		setAll(id, name, barcode, brand, size, color, dateAdded, model, price, quantity, category, discount, description);
 	}
-	
-	public void setAll(int id, String name, String barcode, String brand, String size, String color, String dateAdded, String model, double price, int quantity, String category, double discount, String description){
+
+	public void setAll(int id, String name, String barcode, String brand, String size, String color, Date dateAdded, String model, double price, int quantity, String category, double discount, String description) {
 		setID(id);
 		setName(name);
 		setBarcode(barcode);
@@ -53,11 +59,11 @@ public class GarmentModel {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public void setBarcode(String barcode) {
 		this.barcode = barcode;
 	}
-	
+
 	public String getBarcode() {
 		return barcode;
 	}
@@ -126,18 +132,13 @@ public class GarmentModel {
 		this.color = color;
 	}
 
-	public Date getDateAdded() {
+	public String getDateAdded() {
 		return dateAdded;
 	}
 
-	public void setDateAdded(String dateAddedString) {
-		Date dateAdded;
-		try {
-			dateAdded = new SimpleDateFormat("dd-MM-yyyy").parse(dateAddedString);
-			this.dateAdded = dateAdded;
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+	public void setDateAdded(Date dateAdded) {
+		SimpleDateFormat simpleFormat = new SimpleDateFormat("dd/MM/yyyy");
+		this.dateAdded = simpleFormat.format(dateAdded);
 	}
 
 	public String getModel() {
@@ -147,9 +148,9 @@ public class GarmentModel {
 	public void setModel(String model) {
 		this.model = model;
 	}
-	
+
 	public String toString() {
         return "GarmetModel{" + "id=" + id + ", name=" + name + ", barcode=" + barcode + ", brand=" + brand + ", size=" + size + ", color=" + color + ", dateAdded=" + dateAdded + ", model=" + model + ", price=" + price + ", quantity=" + quantity + ", category=" + category + ", discount=" + discount + ", description=" + description + '}';
     }
-	
+
 }
