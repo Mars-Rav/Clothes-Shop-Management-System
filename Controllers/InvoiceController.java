@@ -22,12 +22,12 @@ public abstract class InvoiceController {
         invoiceBodyList.remove(Invoice);
     }
     
-    public double calculateTotalPrice(ArrayList<GarmentModel> garmentsList)
+   public static double calculateTotalPrice(ArrayList<GarmentModel> garmentsList)
     {
 	double totalPrice = 0;
 	for(int i = 0; i < garmentsList.size(); i++){
 	
-		totalPrice = totalPrice + garmentsList.get(i).getPrice();
+		totalPrice = totalPrice + garmentsList.get(i).getPrice()*garmentsList.get(i).getQuantity();
 	}
 		
 	return totalPrice;
