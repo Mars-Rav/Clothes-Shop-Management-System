@@ -1,6 +1,5 @@
 package Models;
 
-import Controller.InvoiceController;
 import Models.GarmentModel;
 
 import java.util.ArrayList;
@@ -12,9 +11,9 @@ public class InvoiceModel extends InvoiceHeader {
 	private double totalPriceForType;
 	
 	public InvoiceModel(String cashierName, int cashierID, int invoiceID, Date date, double totalPrice, double totalPriceForType, ArrayList<GarmentModel> garmentsList) {
-		super(cashierName, cashierID, invoiceID, date);
+		super(cashierName, cashierID, invoiceID, date, totalPrice);
 		setTotalPrice(totalPrice);
-		setTotalPriceForType(totalPrice);
+		setTotalPriceForType(totalPriceForType);
 	}
 	
 	public void setTotalPrice(double totalPrice) {
@@ -25,12 +24,12 @@ public class InvoiceModel extends InvoiceHeader {
 		return totalPrice;
 	}
 	
-	public void setTotalPriceForType(double totalPrice) {
-		this.totalPrice = totalPrice;
+	public void setTotalPriceForType(double totalPriceForType) {
+		this.totalPriceForType = totalPriceForType;
 	}
 	
 	public Double getTotalPriceForType() {
-		return totalPrice;
+		return totalPriceForType;
 	}
 
 }
