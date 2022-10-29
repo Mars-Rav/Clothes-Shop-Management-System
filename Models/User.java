@@ -1,5 +1,8 @@
 package Models;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class User {
 	
 	private int id;
@@ -13,7 +16,7 @@ public class User {
 	private String password;
 	private String role;
 	
-	public User(int id, String name, String gender, String dob, String phoneNumber, String email, double salary, String address, String password, String role) {
+	public User(int id, String name, String gender, Date dob, String phoneNumber, String email, double salary, String address, String password, String role) {
 		setID(id);
 		setName(name);
 		setGender(gender);
@@ -54,8 +57,9 @@ public class User {
 		return dob;
 	}
 
-	public void setDob(String dob) {
-		this.dob = dob;
+	public void setDob(Date dob) {
+		SimpleDateFormat simpleFormat = new SimpleDateFormat("dd/MM/yyyy");
+		this.dob = simpleFormat.format(dob);
 	}
 
 	public String getPhoneNumber() {
