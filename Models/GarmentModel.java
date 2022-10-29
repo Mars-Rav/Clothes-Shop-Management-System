@@ -149,7 +149,7 @@ public class GarmentModel {
 	}
 	
 	public String toString() {
-		return "Garment: [" + id + " - " + name + " - " + barcode + " - " + price + " - " + quantity + " - " + category + " - " + discount + " - " + description + "]";
-	}
+        return "GarmetModel{" + "id=" + id + ", name=" + name + ", barcode=" + barcode + ", brand=" + brand + ", size=" + size + ", color=" + color + ", dateAdded=" + dateAdded + ", model=" + model + ", price=" + price + ", quantity=" + quantity + ", category=" + category + ", discount=" + discount + ", description=" + description + '}';
+    }
 	
 }
