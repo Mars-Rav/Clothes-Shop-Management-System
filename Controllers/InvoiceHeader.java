@@ -9,7 +9,8 @@ import Models.InvoiceHeader;
 import java.util.ArrayList;
 import java.util.Date;
 
-public abstract class InvoiceHeaderController {
+public abstract class InvoiceHeaderController 
+{
 	public static InvoiceHeader header;
     public InvoiceHeaderController(String cashierName, int cashierID, int invoiceID, ArrayList<GarmentModel> garmentsList) {
 
