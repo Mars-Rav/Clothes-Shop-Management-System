@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 public abstract class GarmentController {
 
     static Scanner input = new Scanner(System.in);
-    static File test = new File("C:\\Users\\SRUSHT\\Desktop/Inventory.txt",true);
+    static File test = new File("C:\\Users\\SRUSHT\\Desktop/Inventory.txt");
 
     private static ArrayList<GarmentModel> inventory = new ArrayList<>();
     static public void addToInventory() throws IOException, ParseException {
