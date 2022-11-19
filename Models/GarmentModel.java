@@ -2,12 +2,11 @@ package Models;
 
 import java.util.Date;
 import java.io.*;
-import java.io.*;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class GarmentModel {
+public class GarmentModel implements Serializable{
 
+	private static final long serialVersionUID = 1L; //Serial Version UID
 	private int id;
 	private String name;
 	private String barcode;

@@ -11,7 +11,7 @@ public class InvoiceHeader {
 	
 	private final String ShopName = "Boutique";
 	
-	public InvoiceHeader(String cashierName, int cashierID, int invoiceID, Date date,Double totalPrice){
+	public InvoiceHeader(String cashierName, int cashierID, int invoiceID, Date date, Double totalPrice){
 		setID(cashierID);
 		setCashierName(cashierName);
 		setInvoiceID(invoiceID);
@@ -56,4 +56,16 @@ public class InvoiceHeader {
 		return totalPrice;
 	}
 
+	@Override
+	public String toString() {
+		return "InvoiceHeader{" +
+				"id=" + id +
+				", empName='" + empName + '\'' +
+				", invoiceID=" + invoiceID +
+				", date=" + date +
+				", totalPrice=" + totalPrice +
+				", ShopName='" + ShopName + '\'' +
+				'}';
+	}
 }
+

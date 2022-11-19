@@ -1,58 +1,127 @@
 package Controllers;
-import Models.GarmentModel;
+
+import java.util.*;
 import java.util.ArrayList;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
+
+import Models.GarmentModel;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public abstract class GarmentController {
 
-	private static ArrayList<GarmentModel> inventory = new ArrayList<GarmentModel>();
+    static Scanner input = new Scanner(System.in);
+    static File test = new File("C:\\Users\\SRUSHT\\Desktop/Inventory.txt");
 
-	public static void addToInventory(GarmentModel newGarment)throws IOException, ParseException {
+    private static ArrayList<GarmentModel> inventory = new ArrayList<>();
+    static public void addToInventory() throws IOException, ParseException {
+    	
+    	System.out.println("Enter ID:");
+        int ID = Integer.parseInt(input.nextLine());
 
-		inventory.add(newGarment);
+        System.out.println("Enter name:");
+        String name = input.nextLine();
 
-		File garmentInfo = new File ("C:/Users/High Tech/Desktop/Inventory.txt");
-		
-		if(!garmentInfo.exists()) {
-			garmentInfo.createNewFile();
-		}
-		GarmentModel garment = new GarmentModel(124, "Mars", "677C31V", "Louis Vittoun", "S", "Blue", new SimpleDateFormat("dd/MM/yyyy").parse("11/11/2011"), "YUI1", 200.0, 30, "Punk", 0.1, "Extra Nice");
+        System.out.println("Enter the barcode:");
+        String barcode = input.nextLine();
 
-		FileOutputStream fos = new FileOutputStream(garmentInfo);
-		fos.write(garment.toString().getBytes());
-	
-		fos.flush();
-		fos.close();
+        System.out.println("Enter brand:");
+        String brand = input.nextLine();
 
-	}
-	
-	public static void  getInfo() throws IOException{
-		Stream<String> info = Files.lines(Paths.get("C:\\Users\\High Tech\\Desktop/Inventory.txt"));
-	}
+        System.out.println("Enter size:");
+        String size = input.nextLine();
 
-	public static void removeGarment(String name){
+        System.out.println("Enter color:");
+        String color = input.nextLine();
 
-		for(int i = 0; i < inventory.size(); i++){
+        System.out.println("Enter model:");
+        String model = input.nextLine();
 
-			if(inventory.get(i).getName().contains(name)){
-				inventory.remove(inventory.get(i));
-			}
-		}
+        System.out.println("Enter price:");
+        double price = Double.parseDouble(input.nextLine());
+
+        System.out.println("Enter quantity:");
+        int quantity = Integer.parseInt(input.nextLine());
+
+        System.out.println("Enter the category:");
+        String category = input.nextLine();
+
+        System.out.println("Enter Description:");
+        String description = input.nextLine();
+
+        System.out.println("Enter Discount:");
+        double discount = Double.parseDouble(input.nextLine());
+
+        LocalDate dateObj = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        String date = dateObj.format(formatter);
+        Date date1 = new SimpleDateFormat("dd/MM/yyyy").parse(date);
+    	
+        readFromFile();
+        inventory.add(new GarmentModel(ID, name, barcode, brand, size, color, date1, model, price, quantity, category, discount, description));
+        add();
+
     }
 
+
+    public static void add() throws IOException, ParseException {
+
+        try {
+            FileOutputStream fos = new FileOutputStream(test);
+            ObjectOutputStream out = new ObjectOutputStream(fos);
+
+            out.writeObject(inventory);
+            out.flush();
+            out.close();
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+    }
+
+
+    static void readFromFile() {
+
+        try {
+
+            FileInputStream fis = new FileInputStream(test);
+            ObjectInputStream in = new ObjectInputStream(fis);
+
+            inventory = (ArrayList<GarmentModel>) in.readObject();
+            
+            in.close();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static  void printGarments(){
+        readFromFile();
+        inventory.stream().forEach(p-> System.out.println(p));
+
+    }
+    
+    public static ArrayList<GarmentModel> getGarments(){
+        readFromFile();
+        ArrayList<GarmentModel> list = (ArrayList<GarmentModel>) inventory.stream().collect(Collectors.toList());
+        return inventory;
+
+    }
+
+    public static void removeGarment(String name) {
+    	
+    }
+    
     public static void removeGarment(int id) {
-    	for(int i = 0; i < inventory.size(); i++){
-
-			if(inventory.get(i).getID() == id){
-				inventory.remove(inventory.get(i));
-			}
-
-		}
+    	
     }
 
 }
