@@ -1,1 +1,0 @@
-GarmetModel{id=124, name=Mars, barcode=677C31V, brand=Louis Vittoun, size=S, color=Blue, dateAdded=11/11/2011, model=YUI1, price=200.0, quantity=30, category=Punk, discount=0.1, description=Extra Nice}
