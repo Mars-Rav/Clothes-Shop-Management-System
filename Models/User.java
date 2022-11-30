@@ -1,10 +1,12 @@
 package Models;
 
+import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class User {
+public class User implements Serializable{
 	
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String name;
 	private String gender;
@@ -16,7 +18,7 @@ public class User {
 	private String password;
 	private String role;
 	
-	public User(int id, String name, String gender, Date dob, String phoneNumber, String email, double salary, String address, String password, String role) {
+	public User(int id, String name, String gender, String dob, String phoneNumber, String email, double salary, String address, String password, String role) {
 		setID(id);
 		setName(name);
 		setGender(gender);
@@ -57,9 +59,10 @@ public class User {
 		return dob;
 	}
 
-	public void setDob(Date dob) {
-		SimpleDateFormat simpleFormat = new SimpleDateFormat("dd/MM/yyyy");
-		this.dob = simpleFormat.format(dob);
+	public void setDob(String dob) {
+//		SimpleDateFormat simpleFormat = new SimpleDateFormat("dd/MM/yyyy");
+//		this.dob = simpleFormat.format(dob);
+		this.dob = dob;
 	}
 
 	public String getPhoneNumber() {
