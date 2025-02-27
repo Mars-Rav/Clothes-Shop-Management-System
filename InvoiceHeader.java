@@ -7,6 +7,9 @@ public class InvoiceHeader {
 	private String empName;
 	private int invoiceID;
 	private Date date;
+
+
+
 	private Double totalPrice;
 	
 	private final String ShopName = "Boutique";
@@ -56,16 +59,4 @@ public class InvoiceHeader {
 		return totalPrice;
 	}
 
-	@Override
-	public String toString() {
-		return "InvoiceHeader{" +
-				"id=" + id +
-				", empName='" + empName + '\'' +
-				", invoiceID=" + invoiceID +
-				", date=" + date +
-				", totalPrice=" + totalPrice +
-				", ShopName='" + ShopName + '\'' +
-				'}';
-	}
 }
-
